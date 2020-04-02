@@ -82,7 +82,7 @@ router.post('/login', (req, res) => {
     email
   }).then(user => {
     if (!user) {
-      errors.email = 'User Not Found';
+      errors.email = 'User Not Found in Database';
       return res.status(404).json(errors);
     }
 
